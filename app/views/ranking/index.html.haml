@@ -1,4 +1,6 @@
-Ranking index page
-%ul
-- @players.each do |player|
-  %li= player.id
+%div.container-fluid
+    Ranking index page
+    %ul
+    - @players.each.with_index do |player, index|
+        %li
+            %a{ href: ranking_path(id: player.id) }= "##{index+1}: #{player.name}"
