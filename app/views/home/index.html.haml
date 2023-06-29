@@ -1,1 +1,22 @@
-WTF
+.container
+  welcome to the tetty site
+#funnyCarousel.carousel.slide{ 'data-bs-ride': 'carousel' }
+  .carousel-indicators
+    %button{ 'data-bs-target': '#funnyCarousel', 'data-bs-slide-to': 0, 'class': 'active', 'aria-current': 'true', 'aria-label': 'Slide 1'  }
+    %button{ 'data-bs-target': '#funnyCarousel', 'data-bs-slide-to': 1, 'aria-label': 'Slide 2'  }
+    %button{ 'data-bs-target': '#funnyCarousel', 'data-bs-slide-to': 2, 'aria-label': 'Slide 3'  }
+  .carousel-inner
+    .carousel-item.active
+      %img{ src: image_url('fantasticfour.jpg') }
+  .carousel-inner
+    .carousel-item.active
+      %img{ src: image_url('videogames.jpg') }
+  .carousel-inner
+    .carousel-item.active
+      %img{ src: image_url('fastcars.jpg') }
+  %button.carousel-control-prev{ type: 'button', 'data-bs-target': '#funnyCarousel' }
+    %span.carousel-control-prev-icon{ 'aria-hidden': 'true' }
+    %span.visually-hidden='Previous'
+  %button.carousel-control-next{ type: 'button', 'data-bs-target': '#funnyCarousel' }
+    %span.carousel-control-next-icon{ 'aria-hidden': 'true' }
+    %span.visually-hidden='nextious'
